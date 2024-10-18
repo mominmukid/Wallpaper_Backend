@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express();
+let cors = require('cors')
 const allCatagory=require('./routes/allCatagory');
 require("dotenv").config();
+app.use(cors())
 
 //home route
 app.get('/', function (req, res) {
